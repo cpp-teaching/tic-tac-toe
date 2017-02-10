@@ -46,8 +46,8 @@ public:
         for(int a = 0; a < field; a += 1 )
     {
 
-            if (a % 3 == 0)
-                std::cout << std::endl;
+            if (a % 3 == 0 && a != 0)
+                std::cout << m_data[a] << std::endl;
 
             else
                 std::cout << m_data[a];
