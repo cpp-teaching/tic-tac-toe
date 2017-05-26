@@ -11,7 +11,7 @@ enum class Tile
 };
 
 
-  std::ostream operator <<(std::ostream& stream, const Tile& tile)  {
+  std::ostream& operator <<(std::ostream& stream, const Tile& tile)  {
     switch(tile) {
         case Tile::X:
             stream << "|X|";

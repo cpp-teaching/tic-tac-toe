@@ -20,8 +20,8 @@ public:
     {}
 
 
-    Grid(std::vector <Tile> data, int w, int h):
-    m_data(data), m_w(w), m_h(h), field (m_w*m_h)
+    Grid(int w, int h):
+    m_w(w), m_h(h), field (m_w*m_h), m_data(field, Tile::Empty)
     {}
 
 
@@ -40,17 +40,28 @@ public:
     }
 
 
+    int get_width()
+    {
+        return m_w;
+    }
+
+    int get_height()
+    {
+        return m_h;
+    }
+
+
 
     void print()
     {
-        for(int a = 0; a < field; a += 1 )
+        for(int a = 1; a < field+1; a += 1 )
     {
 
             if (a % 3 == 0 && a != 0)
-                std::cout << m_data[a] << std::endl;
+                std::cout << m_data[a-1] << std::endl;
 
             else
-                std::cout << m_data[a];
+                std::cout << m_data[a-1];
 
     }
     }
