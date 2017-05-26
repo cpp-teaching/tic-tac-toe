@@ -53,7 +53,7 @@ class Game
     private:
     Grid m_game_grid;
     GameStatus m_status;
-
+    SearchEngine m_SearchEngine;
 
 
 };
