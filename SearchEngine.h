@@ -8,6 +8,16 @@
 
 class SearchEngine
 {
+
+    SearchEngine() = default;
+
+    ~SearchEngine() = default;
+
+
+
+
+
+
     public:
         bool check_singlex_vertical(int x, int y, Grid m_game_grid)
         {
